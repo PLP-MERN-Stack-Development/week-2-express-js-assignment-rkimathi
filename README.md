@@ -1,60 +1,74 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19956222&assignment_repo_type=AssignmentRepo)
-# Express.js RESTful API Assignment
+## Key Features Implemented:
+### Express Server Setup:
 
-This assignment focuses on building a RESTful API using Express.js, implementing proper routing, middleware, and error handling.
+- Basic server configuration with proper middleware
 
-## Assignment Overview
+- Environment variables support using dotenv
 
-You will:
-1. Set up an Express.js server
-2. Create RESTful API routes for a product resource
-3. Implement custom middleware for logging, authentication, and validation
-4. Add comprehensive error handling
-5. Develop advanced features like filtering, pagination, and search
+### RESTful API Routes:
 
-## Getting Started
+- Complete CRUD operations for products
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Run the server:
-   ```
-   npm start
-   ```
+- Proper status codes and response formats
 
-## Files Included
+### Custom Middleware:
 
-- `Week2-Assignment.md`: Detailed assignment instructions
-- `server.js`: Starter Express.js server file
-- `.env.example`: Example environment variables file
+- Request logging: Using morgan and custom logging
 
-## Requirements
+- Authentication: JWT token verification
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Postman, Insomnia, or curl for API testing
+### Validation: Product data validation
 
-## API Endpoints
+- Error handling: Comprehensive error handling middleware
 
-The API will have the following endpoints:
+### Advanced Features:
 
-- `GET /api/products`: Get all products
-- `GET /api/products/:id`: Get a specific product
-- `POST /api/products`: Create a new product
-- `PUT /api/products/:id`: Update a product
-- `DELETE /api/products/:id`: Delete a product
+- Filtering: By name, price range, category, and stock status
 
-## Submission
+- Pagination: Page and limit parameters
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+- Search: Across name and description fields
 
-1. Complete all the required API endpoints
-2. Implement the middleware and error handling
-3. Document your API in the README.md
-4. Include examples of requests and responses
+### Security:
+
+- Protected routes (POST, PUT, DELETE)
+
+- Input validation
+
+- Secure token handling
+
+### Error Handling:
+
+- Custom error responses
+
+- 404 handler for unknown routes
+
+- 500 error handler
+
+
+## To use this API:
+
+- Install required dependencies:
+
+```npm install express body-parser uuid morgan jsonwebtoken dotenv```
+
+- Create a .env file with:
+
+
+`JWT_SECRET=your-secret-key`
+`PORT=3000`
+
+
+- Get a token by POSTing to /api/login with:
+
+`json`
+`{`
+  `"username": "admin",`
+  `"password": "password"`
+`}`
+
+
+
 
 ## Resources
 
