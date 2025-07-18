@@ -61,7 +61,7 @@
 
 - Get a token by POSTing to /api/login with:
 
-`json`
+
 `{`
   `"username": "admin",`
   `"password": "password"`
